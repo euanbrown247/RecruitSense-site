@@ -8,10 +8,58 @@
 </head>
 <body class="dark-mode">
     <div class="container">
-        <h1>RecruitSense</h1>
-        <p class="tagline">Streamlining NCAA Recruiting</p>
-        <p class="description">Our advanced NLP-powered tool will revolutionize the way coaches manage recruiting emails.</p>
-        <p class="cta">Stay Tuned! Coming Soon.</p>
+        <!-- ... Rest of the HTML content ... -->
+        
+        <!-- Countdown Timer -->
+        <div class="countdown-timer">
+            <p class="timer-heading">Launch Date</p>
+            <div class="timer">
+                <div class="timer-block">
+                    <span class="days">--</span>
+                    <p class="timer-label">Days</p>
+                </div>
+                <div class="timer-block">
+                    <span class="hours">--</span>
+                    <p class="timer-label">Hours</p>
+                </div>
+                <div class="timer-block">
+                    <span class="minutes">--</span>
+                    <p class="timer-label">Minutes</p>
+                </div>
+                <div class="timer-block">
+                    <span class="seconds">--</span>
+                    <p class="timer-label">Seconds</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- JavaScript for Countdown Timer -->
+    <script>
+        // Set the launch date (Replace this with the actual launch date in the format: "Month day, year HH:mm:ss")
+        const launchDate = new Date("August 20, 2023 12:00:00").getTime();
+
+        // Update the countdown timer every second
+        const countdownTimer = setInterval(function() {
+            const now = new Date().getTime();
+            const timeRemaining = launchDate - now;
+
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            document.querySelector(".days").textContent = days;
+            document.querySelector(".hours").textContent = hours;
+            document.querySelector(".minutes").textContent = minutes;
+            document.querySelector(".seconds").textContent = seconds;
+
+            // If the launch date has passed, display a message
+            if (timeRemaining < 0) {
+                clearInterval(countdownTimer);
+                document.querySelector(".timer").innerHTML = "<p class='expired-message'>We've Launched!</p>";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
