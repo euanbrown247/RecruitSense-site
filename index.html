@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecruitSense | Coming Soon</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
-        body.dark-mode {
-            background-color: #1a1a1a;
-            color: #ffffff;
+        body {
+            background-color: #000;
+            color: #00ff00; /* Green text color */
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
@@ -16,6 +19,8 @@
             margin: 0 auto;
             text-align: center;
             padding: 30px;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
         }
 
         h1 {
@@ -105,11 +110,13 @@
             color: #ff5722; /* Red color */
         }
 
-                /* New styles for feature boxes */
+        /* New styles for feature boxes */
         .feature-box {
-            background-color: #f2f2f2; /* Light gray background */
-            padding: 20px;
-            border-radius: 10px; /* Rounded edges */
+            background-color: #000; /* Black background */
+            color: #00ff00; /* Green text color */
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            padding: 10px;
             margin-bottom: 20px;
         }
 
@@ -122,20 +129,15 @@
         .feature-description {
             font-size: 1rem;
         }
-
-        
     </style>
-
-
 </head>
-<body class="dark-mode">
+<body>
     <div class="container">
         <h1>RecruitSense</h1>
         <p class="tagline">Streamlining NCAA Recruiting</p>
         <p class="description">Our advanced AI and Deep Learning tool will revolutionize the way coaches manage recruiting emails.</p>
         <p class="cta">Stay Tuned! Coming Soon.</p>
         
-
         <!-- Teaser Information -->
         <div class="teaser-info">
             <p class="highlight">Discover the Future of Recruiting</p>
@@ -146,10 +148,9 @@
             <p class="pricing-info">Our subscription-based pricing model offers flexibility, allowing you to choose the tier that best suits your coaching needs.</p>
         </div>
 
-<!-- 
         <div class="feature-box">
             <p class="feature-heading">Feature 1</p>
-            <p class="feature-description">AI fueled recruiting email proccessing</p>
+            <p class="feature-description">AI fueled recruiting email processing</p>
         </div>
 
         <div class="feature-box">
@@ -159,11 +160,9 @@
 
         <div class="feature-box">
             <p class="feature-heading">Feature 3</p>
-            <p class="feature-description">Integration with existing recruitng software</p>
+            <p class="feature-description">Integration with existing recruiting software</p>
         </div>
 
- -->
-        
         <!-- Countdown Timer -->
         <div class="countdown-timer">
             <p class="timer-heading">Launch Date</p>
@@ -191,6 +190,7 @@
     </div>
 
     <!-- JavaScript for Countdown Timer -->
+
     <script>
         // Set the launch date (Replace this with the actual launch date in the format: "Month day, year HH:mm:ss")
         const launchDate = new Date("August 20, 2023 12:00:00").getTime();
