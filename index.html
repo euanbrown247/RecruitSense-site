@@ -17,7 +17,6 @@
         .container {
             max-width: 600px;
             margin: 0 auto;
-            text-align: center;
             padding: 30px;
             border: 1px solid #00ff00;
             border-radius: 5px;
@@ -129,15 +128,31 @@
         .feature-description {
             font-size: 1rem;
         }
+
+        .terminal-prompt {
+            color: #00ff00; /* Green text color */
+        }
+
+        .blinking-cursor::after {
+            content: '_';
+            animation: blink 1s infinite;
+        }
+
+        .dark-mode {
+            background-color: #191919; /* Dark gray background */
+            color: #00ff00; /* Green text color */
+        }
     </style>
 </head>
-<body>
+<body class="dark-mode">
     <div class="container">
+        <pre>
+        <span class="terminal-prompt">user@recruitsense:~$</span> <span>./RecruitSense</span>
         <h1>RecruitSense</h1>
         <p class="tagline">Streamlining NCAA Recruiting</p>
         <p class="description">Our advanced AI and Deep Learning tool will revolutionize the way coaches manage recruiting emails.</p>
         <p class="cta">Stay Tuned! Coming Soon.</p>
-        
+        </pre>
         <!-- Teaser Information -->
         <div class="teaser-info">
             <p class="highlight">Discover the Future of Recruiting</p>
@@ -148,6 +163,7 @@
             <p class="pricing-info">Our subscription-based pricing model offers flexibility, allowing you to choose the tier that best suits your coaching needs.</p>
         </div>
 
+        <!-- Feature Boxes -->
         <div class="feature-box">
             <p class="feature-heading">Feature 1</p>
             <p class="feature-description">AI fueled recruiting email processing</p>
@@ -190,7 +206,6 @@
     </div>
 
     <!-- JavaScript for Countdown Timer -->
-
     <script>
         // Set the launch date (Replace this with the actual launch date in the format: "Month day, year HH:mm:ss")
         const launchDate = new Date("August 20, 2023 12:00:00").getTime();
